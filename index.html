@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <meta name="viewport" content="user-scalable=no"/> -->
+	<!-- <meta name="HandheldFriendly" content="true" /> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+
+	<meta charset="utf-8">
+		<title>Tiny👶🏽👆🏽Touch</title>
+
+	<link rel="shortcut icon" href="/images/Favicon.png" type="image/png">
+	<link rel="apple-touch-icon" href="/images/Favicon.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+	<!-- following code snippet from https://github.com/pukhalski/tap thank you Ilya -->
+	<script> !function(a){var b={},c={};c.attachEvent=function(b,c,d){if("addEventListener"in a)return b.addEventListener(c,d,!1)},c.fireFakeEvent=function(a,b){if(document.createEvent)return a.target.dispatchEvent(c.createEvent(b))},c.createEvent=function(b){if(document.createEvent){var c=a.document.createEvent("HTMLEvents");return c.initEvent(b,!0,!0),c.eventName=b,c}},c.getRealEvent=function(a){return a.originalEvent&&a.originalEvent.touches&&a.originalEvent.touches.length?a.originalEvent.touches[0]:a.touches&&a.touches.length?a.touches[0]:a};var d=[{test:("propertyIsEnumerable"in a||"hasOwnProperty"in document)&&(a.propertyIsEnumerable("ontouchstart")||document.hasOwnProperty("ontouchstart")||a.hasOwnProperty("ontouchstart")),events:{start:"touchstart",move:"touchmove",end:"touchend"}},{test:a.navigator.msPointerEnabled,events:{start:"MSPointerDown",move:"MSPointerMove",end:"MSPointerUp"}},{test:a.navigator.pointerEnabled,events:{start:"pointerdown",move:"pointermove",end:"pointerup"}}];b.options={eventName:"tap",fingerMaxOffset:11};var e,f,g,h,i={};e=function(a){return c.attachEvent(document.documentElement,h[a],g[a])},g={start:function(a){a=c.getRealEvent(a),i.start=[a.pageX,a.pageY],i.offset=[0,0]},move:function(a){if(!i.start&&!i.move)return!1;a=c.getRealEvent(a),i.move=[a.pageX,a.pageY],i.offset=[Math.abs(i.move[0]-i.start[0]),Math.abs(i.move[1]-i.start[1])]},end:function(d){if(d=c.getRealEvent(d),i.offset&&d.preventDefault&&i.offset[0]<b.options.fingerMaxOffset&&i.offset[1]<b.options.fingerMaxOffset&&!c.fireFakeEvent(d,b.options.eventName)){if(a.navigator.msPointerEnabled||a.navigator.pointerEnabled){var e=function(a){a.preventDefault(),d.target.removeEventListener("click",e)};d.target.addEventListener("click",e,!1)}d.preventDefault()}i={}},click:function(a){if(!c.fireFakeEvent(a,b.options.eventName))return a.preventDefault()}},f=function(){for(var a=0;a<d.length;a++)if(d[a].test){h=d[a].events,e("start"),e("move"),e("end");break}return c.attachEvent(document.documentElement,"click",g.click)},c.attachEvent(a,"load",f),"function"==typeof define&&define.amd?define(function(){return f(),b}):a.Tap=b}(window);</script>
+	
+	<style>
+	  body {
+	margin: 20px;
+	border-radius: 10px;
+	text-align: center;
+	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+	font-family: 'Ubuntu', sans-serif;
+	overscroll-behavior: contain;
+	color: #ffe6e6;
+	  }
+   
+	@keyframes gs {
+	  from {font-size: 2vw;}
+	  to {font-size: 4vw;}
+	}
+	
+	html, body {
+		margin: 0;
+		height: 100%;
+		overflow: hidden;
+		overscroll-behavior-x: none;
+		touch-action: none;
+		}
+	</style>
+	
+</head>
+<body>
+<div style="font-size: 6vw;">
+	Tiny 👶🏽👆🏽 Touch
+	<br>
+	babyproof js+css
+</div>
+<br>
+<div style="
+	font-size: 3vw;
+	animation-name: gs;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	">
+ ▼ READ THE SOURCE CODE ▼
+ </div>
+<br><br>
+<div style="
+	font-size: 3vw;
+	background: rgb(0 0 255 / 30%);
+	border-radius: 5vw	;
+	width: min(92vw, 820px);
+	margin: auto;
+	">
+  Who am I ? a father that developed all kinda games for their infant to discover that touch is just not built for them
+</div>
+<br><br>
+<div id="test" style="
+	font-size: 3vw;
+	background: rgb(255 0 0 / 30%);
+	border-radius: 5vw	;
+	width: min(92vw, 820px);
+	margin: auto;
+	">
+THIS SITE IS ILLEGAL IN THE UK AND OTHER PLACES PLEASE DON'T USE IT <br>
+ [it breaks handicap website laws but for is for educational purposes so I have a chance in court]
+</div>
+<br><br> 
+ <div style="
+	font-size: 3vw;
+	background: rgb(0 255 0 / 30%);
+	border-radius: 5vw	;
+	width: min(92vw, 820px);
+	margin: auto;
+	">
+  What is going on? <br>
+  i 	no scrolling <br>
+  | html, body {margin: 0; height: 100%; overflow: hidden} | <br><br>
+  ii 	no drag refresh <br>
+  | html, body {overscroll-behavior-x: none;} | <br><br>
+  iii	no drag tab switch <br>
+  | window.history.replaceState(null, null, "#" + url) | <br><br>
+  iv	multitouch to one centroid touch  <br>
+  v		time limit for touch edited  <br>
+  vi	no right click  <br>
+  | document.addEventListener("contextmenu", function (e){e.preventDefault();}, false); | <br><br>
+  vii 	no finger zoom  <br>
+  | html, body {touch-action: none;} |
+</div>
+<script>
+	document.addEventListener("contextmenu", function (e){e.preventDefault();}, false);
+	document.getElementById('test').addEventListener('tap', function (e) {
+		console.log("sure",e)
+		<!-- TODO: 1. MAKE TESTING POSSIBLE ON MOBILE - IMMEDIATE FEEDBACK, OVER-COUNT, MULTI-TOUCH. 2. MAKE OWN EVENT MANAGER  -->
+	});
+	window.history.replaceState(null, null, "#index.html")
+	<!-- not tested  -->
+</script>
+</body>
+</html>
